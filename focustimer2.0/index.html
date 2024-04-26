@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta name="description" content="Temporizador estilo pomodoro">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Focus Timer 2.0</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+  
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="src/main.js" defer></script>
+  <body>
+  <div id="app">
+    <button id="toggle-mode">
+    <span class="sr-only">Ativar/Desativar Light mode</span>
+      <i class="ph-bold ph-sun"></i>
+      <i class="ph-bold ph-moon"></i>
+    </button>
+    
+    <section id="timer" class="flex">
+      <span id="minutes">25</span>
+      <span>:</span>
+      <span id="seconds">00</span>
+    </section>
+
+    <section id="controls" class="flex">
+      <button
+        data-action="toggleRunning"
+        class="ph ph-play-circle">
+        <span class="sr-only">Iniciar contador</span>
+      </button>
+      <button
+      data-action="toggleRunning"
+        class="ph ph-pause-circle">
+        <span class="sr-only">Pausar contador</span>
+      </button>
+      <button 
+        data-action="reset"
+        class="ph ph-stop-circle secondary">
+        <span class="sr-only">Reiniciar contador</span>
+      </button>
+      <button 
+        data-action="plus"
+        class="ph ph-plus-circle">
+        <span class="sr-only">Acrescentar 5 minutos</span>
+      </button>
+      <button 
+        data-action="minus"
+        class="ph ph-minus-circle">
+        <span class="sr-only">Diminuir 5 minutos</span>
+      </button>
+    </section>
+
+    <section id="music-controls" class="flex">
+      <button 
+        data-action="forestMusic"
+        class="ph ph-tree-evergreen">
+        <span class="sr-only">Musica ambiente de floresta</span>
+      </button>
+      <button 
+        data-action="rainMusic"
+        class="ph ph-cloud-rain">
+        <span class="sr-only">Musica ambiente de chuva</span>
+      </button>
+      <button 
+        data-action="cafeMusic"
+        class="ph ph-storefront">
+        <span class="sr-only">Musica ambiente de cafeteria</span>
+      </button>
+      <button 
+        data-action="fireMusic"
+        class="ph ph-fire">
+        <span class="sr-only">Musica ambiente de lareira</span>
+      </button>
+    </section>
+  </div>
+</body>
+</html>
